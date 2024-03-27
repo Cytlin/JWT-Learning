@@ -1,0 +1,44 @@
+
+###login and the username used to login is used to create 
+###an access token 
+POST http://localhost:3007/login
+Content-Type:application/json
+
+{
+    "username": "cytlinadhiambo@gmail.com"
+}
+
+
+
+### get data
+GET http://localhost:3006/posts
+Authorization: Bearer 
+
+
+###send refresh token to get access token
+POST http://localhost:3006/token
+Content-Type:application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiY3l0bGluYWRoaWFtYm9AZ21haWwuY29tIiwiaWF0IjoxNjk0NzcxNTU2fQ.Ngrw620sNSbWsTKnojRkR5QnbEOVm_P9AaASb4vMmxc"
+}
+
+
+###Delete refresh token
+DELETE http://localhost:3006/logout
+Content-Type:application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiS3lsZSIsImlhdCI6MTY4NjU3NDAwMH0.dozbzRu-z6Lc-SOI0Czz5SD8v2l8nYG-GvffHl2LDxc"
+}
+
+
+
+
+### get post
+GET http://localhost:3006/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiS3lsZSIsImlhdCI6MTY4NjU3MzgwMiwiZXhwIjoxNjg2NTczODQ3fQ.8yEOnPOkdQGY84dqvhcRPgSGTyZUm1w2cxYdFRfqifM
+
+
+
+
